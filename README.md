@@ -42,12 +42,15 @@ of the `mongo` rubygem into Chef's Ruby environment
 #### Example
 ```ruby
 mongo_chef_gem 'default' do
-  gem_version '2.1.0'
+  mongo_version '2.1.2'
+  bson_ext_version '1.12.4'
   action :install
 end
 ```
 #### Parameters
-- `gem_version` - The version of the `mongo` Rubygem to install into
+- `mongo_version` - The version of the `mongo` Rubygem to install into
+  the Chef environment. Defaults to last version.
+- `bson_ext_version` - The version of the `bson_ext` Rubygem to install into
   the Chef environment. Defaults to last version.
 
 #### Actions

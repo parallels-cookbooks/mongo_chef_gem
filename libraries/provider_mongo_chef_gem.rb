@@ -46,13 +46,21 @@ class Chef
         end.run_action(:install)
 
         chef_gem 'mongo' do
-          version new_resource.gem_version
+          version new_resource.mongo_version
+          action :install
+        end
+
+        chef_gem 'bson_ext' do
+          version new_resource.bson_ext_version
           action :install
         end
       end
 
       action :remove do
         chef_gem 'mongo' do
+          action :remove
+        end
+        chef_gem 'bson_ext' do
           action :remove
         end
       end

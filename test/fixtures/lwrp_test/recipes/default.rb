@@ -17,6 +17,7 @@
 # limitations under the License.
 
 mongo_chef_gem 'default' do
-  gem_version '2.1.0'
+  mongo_version '2.1.2'
+  bson_ext_version '1.12.4'
   action :install
 end
